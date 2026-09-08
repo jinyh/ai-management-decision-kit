@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向企业管理者的AI项目决策知识库：从经营任务、数据与知识、智能体授权到评测与投资证据。">
+  <meta name="theme-color" content="#071d33">
+  <meta property="og:title" content="AI时代的数据治理｜管理决策知识库">
+  <meta property="og:description" content="把AI项目变成可以验证、授权和复盘的管理决策。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jinyh.github.io/ai-management-decision-kit/">
+  <title>AI时代的数据治理｜管理决策知识库</title>
+  <link rel="icon" href="assets/decision-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">决</span>
+        <span>AI × 管理决策</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#paths">学习路径</a>
+        <a href="#framework">决策框架</a>
+        <a href="#library">知识卡</a>
+        <a href="#agent">Agent学习</a>
+      </nav>
+      <a class="header-cta" href="https://github.com/jinyh/ai-management-decision-kit" target="_blank" rel="noreferrer">
+        查看仓库
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> COURSE COMPANION · 2026</p>
+          <h1>把AI项目，变成<br><em>可以验证</em>的<br>管理决策</h1>
+          <p class="hero-lede">从一个真实工作流出发，判断需要什么数据与企业知识、AI可以行动到哪一步，以及什么证据支持继续投入。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#paths">选择我的学习路径</a>
+            <a class="button button-quiet" href="#agent">让 Agent 陪我学习 <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note">无需安装工具即可阅读 · 案例均为教学合成情境</p>
+        </div>
+
+        <div class="hero-visual" aria-label="AI管理决策系统示意图">
+          <div class="visual-kicker">DECISION OPERATING SYSTEM</div>
+          <div class="decision-orbit">
+            <div class="orbit-ring orbit-ring-one"></div>
+            <div class="orbit-ring orbit-ring-two"></div>
+            <div class="orbit-core">
+              <span>经营结果</span>
+              <strong>继续</strong>
+              <small>修改 · 停止</small>
+            </div>
+            <div class="orbit-node node-data"><b>01</b><span>任务数据</span></div>
+            <div class="orbit-node node-knowledge"><b>02</b><span>企业知识</span></div>
+            <div class="orbit-node node-action"><b>03</b><span>行动授权</span></div>
+            <div class="orbit-node node-eval"><b>04</b><span>评测证据</span></div>
+          </div>
+          <div class="visual-footer">
+            <span>模型能力</span><i></i><span>任务上下文</span><i></i><span>运行记录</span>
+          </div>
+        </div>
+      </div>
+      <div class="shell metric-strip" aria-label="知识库内容统计">
+        <div><strong>12</strong><span>张管理知识卡</span></div>
+        <div><strong>4</strong><span>条角色路径</span></div>
+        <div><strong>2</strong><span>个决策案例</span></div>
+        <div><strong>3</strong><span>张管理模板</span></div>
+        <div><strong>1</strong><span>个学习 Skill</span></div>
+      </div>
+    </section>
+
+    <section class="section decision-questions">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-number">01 / 从问题出发</p>
+            <h2>先别急着选模型</h2>
+          </div>
+          <p>一个AI项目进入预算讨论前，管理者至少应能回答四个问题。</p>
+        </div>
+        <div class="question-grid">
+          <article class="question-card question-card-featured">
+            <span class="question-index">01</span>
+            <h3>它改变什么经营结果？</h3>
+            <p>明确成本、周期、收入、风险或合规结果，并写出当前基线。</p>
+            <div class="question-graphic" aria-hidden="true">
+              <span class="bar bar-a"></span><span class="bar bar-b"></span><span class="bar bar-c"></span>
+              <b>RESULT</b>
+            </div>
+          </article>
+          <article class="question-card">
+            <span class="question-index">02</span>
+            <h3>它依赖哪些证据？</h3>
+            <p>区分任务数据、业务定义、制度、合同、经验规则和例外。</p>
+          </article>
+          <article class="question-card">
+            <span class="question-index">03</span>
+            <h3>它可以行动到哪一步？</h3>
+            <p>分开查询、判断、建议、审批准备、系统写入和对外承诺。</p>
+          </article>
+          <article class="question-card question-card-dark">
+            <span class="question-index">04</span>
+            <h3>什么结果支持继续投入？</h3>
+            <p>预先定义验证证据、责任人、停止条件和下一道证据门。</p>
+            <span class="decision-stamp">EVIDENCE<br>BEFORE SCALE</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paths-section" id="paths">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="section-number">02 / 按角色进入</p>
+          <h2>选择离你最近的一条路径</h2>
+          <p>每条路径只安排五张核心卡。先完成一个闭环，再扩展到其他主题。</p>
+        </div>
+        <div class="path-grid">
+          <a class="path-card path-executive" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/paths/executive.md" target="_blank" rel="noreferrer">
+            <div class="path-top"><span class="path-icon">决</span><span class="path-code">PATH 01</span></div>
+            <h3>管理者与投资决策</h3>
+            <p>把“做AI”改写成一笔能够分阶段验证的经营投资。</p>
+            <ul><li>经营结果与错误代价</li><li>四层评测与建设方式</li><li>证据门与投资备忘录</li></ul>
+            <span class="path-link">进入路径 <b>↗</b></span>
+          </a>
+          <a class="path-card path-operations" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/paths/manufacturing-operations.md" target="_blank" rel="noreferrer">
+            <div class="path-top"><span class="path-icon">造</span><span class="path-code">PATH 02</span></div>
+            <h3>制造、供应链与运营</h3>
+            <p>用任务数据、共同语言和授权边界处理跨系统异常。</p>
+            <ul><li>任务型数据质量</li><li>Ontology 与智能体循环</li><li>人工接管与恢复断点</li></ul>
+            <span class="path-link">进入路径 <b>↗</b></span>
+          </a>
+          <a class="path-card path-sales" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/paths/sales-service.md" target="_blank" rel="noreferrer">
+            <div class="path-top"><span class="path-icon">客</span><span class="path-code">PATH 03</span></div>
+            <h3>销售、客户与服务</h3>
+            <p>让客户建议保留依据，同时管住退款、折扣和外部承诺。</p>
+            <ul><li>客户上下文与企业知识</li><li>主动检索与来源保留</li><li>工具权限与人工授权</li></ul>
+            <span class="path-link">进入路径 <b>↗</b></span>
+          </a>
+          <a class="path-card path-functions" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/paths/finance-hr.md" target="_blank" rel="noreferrer">
+            <div class="path-top"><span class="path-icon">控</span><span class="path-code">PATH 04</span></div>
+            <h3>财务、人力与公司职能</h3>
+            <p>用最少必要数据支持决策，并保留复核、访问和删除责任。</p>
+            <ul><li>制度、合同与个人记录</li><li>敏感字段与操作范围</li><li>合规、偏差与审计指标</li></ul>
+            <span class="path-link">进入路径 <b>↗</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section framework-section" id="framework">
+      <div class="shell">
+        <div class="framework-intro">
+          <div>
+            <p class="section-number section-number-light">03 / 一条共同主线</p>
+            <h2>AI能力只有进入<br>管理系统，才产生结果</h2>
+          </div>
+          <p>把模型放回完整的业务链条：它需要任务上下文、企业知识、工具权限、运行记录和可复核的评测。</p>
+        </div>
+        <div class="framework-flow">
+          <div class="flow-step"><span>01</span><strong>模型能力</strong><small>理解 · 推理 · 生成</small></div>
+          <div class="flow-connector" aria-hidden="true">→</div>
+          <div class="flow-step"><span>02</span><strong>任务上下文</strong><small>当前材料 · 指令</small></div>
+          <div class="flow-connector" aria-hidden="true">→</div>
+          <div class="flow-step flow-emphasis"><span>03</span><strong>企业知识</strong><small>定义 · 制度 · 例外</small></div>
+          <div class="flow-connector" aria-hidden="true">→</div>
+          <div class="flow-step"><span>04</span><strong>工具与权限</strong><small>查询 · 写入 · 承诺</small></div>
+          <div class="flow-connector" aria-hidden="true">→</div>
+          <div class="flow-step"><span>05</span><strong>运行记录</strong><small>状态 · 失败 · 接管</small></div>
+          <div class="flow-connector" aria-hidden="true">→</div>
+          <div class="flow-step flow-result"><span>06</span><strong>评测证据</strong><small>任务 · 经营 · 控制</small></div>
+        </div>
+        <div class="framework-caption">
+          <strong>管理者的责任：</strong>
+          <span>不是预测每一次模型输出，而是设计系统能够发现错误、限制影响并安全恢复。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section library-section" id="library">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-number">04 / 知识卡</p>
+            <h2>十二张卡，四组管理问题</h2>
+          </div>
+          <p>无需按顺序读完。选择当前项目最薄弱的一组，从一张卡开始。</p>
+        </div>
+
+        <div class="library-groups">
+          <article class="library-group">
+            <header><span>A</span><div><small>VALUE</small><h3>任务与价值</h3></div></header>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/01-task-and-outcome.md" target="_blank" rel="noreferrer"><b>01</b><span>从任务和经营结果开始</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/02-task-data-quality.md" target="_blank" rel="noreferrer"><b>02</b><span>任务型数据质量</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/03-error-cost-and-evaluation.md" target="_blank" rel="noreferrer"><b>03</b><span>用错误代价比较方案</span><i>↗</i></a>
+          </article>
+          <article class="library-group">
+            <header><span>B</span><div><small>KNOWLEDGE</small><h3>知识与语义</h3></div></header>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/04-context-and-enterprise-knowledge.md" target="_blank" rel="noreferrer"><b>04</b><span>上下文、知识与状态</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/05-active-retrieval.md" target="_blank" rel="noreferrer"><b>05</b><span>从传统RAG到主动检索</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/06-common-language-and-ontology.md" target="_blank" rel="noreferrer"><b>06</b><span>共同语言与Ontology</span><i>↗</i></a>
+          </article>
+          <article class="library-group">
+            <header><span>C</span><div><small>ACTION</small><h3>智能体与授权</h3></div></header>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/07-agent-loop-and-state.md" target="_blank" rel="noreferrer"><b>07</b><span>智能体循环与任务状态</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/08-tools-protocols-and-permissions.md" target="_blank" rel="noreferrer"><b>08</b><span>工具、协议与企业权限</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/09-human-authorization-and-recovery.md" target="_blank" rel="noreferrer"><b>09</b><span>人工授权、接管与恢复</span><i>↗</i></a>
+          </article>
+          <article class="library-group">
+            <header><span>D</span><div><small>INVESTMENT</small><h3>评测与投资</h3></div></header>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/10-four-layer-evaluation.md" target="_blank" rel="noreferrer"><b>10</b><span>四层评测与上线证据</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/11-build-buy-and-fde.md" target="_blank" rel="noreferrer"><b>11</b><span>买、联合实施、自建与FDE</span><i>↗</i></a>
+            <a href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cards/12-evidence-gates-and-memo.md" target="_blank" rel="noreferrer"><b>12</b><span>用证据门管理投资</span><i>↗</i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="section-number">05 / 从案例迁移</p>
+          <h2>先在低风险情境中练习判断</h2>
+        </div>
+        <div class="case-grid">
+          <a class="case-card supplier-case" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cases/supplier-workflow.md" target="_blank" rel="noreferrer">
+            <div class="case-visual" aria-hidden="true">
+              <div class="factory factory-one"></div><div class="factory factory-two"></div>
+              <div class="route-line"></div><div class="route-point point-one"></div><div class="route-point point-two"></div>
+              <span class="case-signal">交付风险</span>
+            </div>
+            <div class="case-copy">
+              <small>CASE 01 · 制造与供应链</small>
+              <h3>供应商交付预警与行动</h3>
+              <p>比较数据与知识平台、智能体流程两项提案；逐步补充证据，再决定下一笔资源。</p>
+              <span>打开案例 <b>↗</b></span>
+            </div>
+          </a>
+          <a class="case-card refund-case" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/cases/customer-refund.md" target="_blank" rel="noreferrer">
+            <div class="case-visual" aria-hidden="true">
+              <div class="receipt"><i></i><i></i><i></i><b>¥</b></div>
+              <div class="approval approval-yes">允许</div>
+              <div class="approval approval-review">需批</div>
+              <div class="approval approval-stop">停止</div>
+            </div>
+            <div class="case-copy">
+              <small>CASE 02 · 客户与服务</small>
+              <h3>客户退款与补偿</h3>
+              <p>面对政策冲突、重复补偿和受限商品，判断哪些动作可自动完成，哪些必须交给责任人。</p>
+              <span>打开案例 <b>↗</b></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section toolkit-section">
+      <div class="shell toolkit-layout">
+        <div class="toolkit-copy">
+          <p class="section-number">06 / 带走就能用</p>
+          <h2>三张表，把讨论变成决定</h2>
+          <p>从一张任务证据表开始。只有当经营问题、证据和责任写得足够具体，才进入授权与投资讨论。</p>
+        </div>
+        <div class="tool-stack">
+          <a class="tool-sheet sheet-one" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/templates/task-evidence.md" target="_blank" rel="noreferrer">
+            <span>01</span><strong>任务证据表</strong><small>任务 · 基线 · 错误代价</small>
+          </a>
+          <a class="tool-sheet sheet-two" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/templates/action-authorization.md" target="_blank" rel="noreferrer">
+            <span>02</span><strong>行动授权表</strong><small>允许 · 需批 · 停止</small>
+          </a>
+          <a class="tool-sheet sheet-three" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/templates/investment-memo.md" target="_blank" rel="noreferrer">
+            <span>03</span><strong>投资决策备忘录</strong><small>证据门 · 下一步 · 责任人</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section agent-section" id="agent">
+      <div class="agent-noise" aria-hidden="true"></div>
+      <div class="shell agent-layout">
+        <div class="agent-copy">
+          <p class="section-number section-number-light">07 / 与 Agent 一起学习</p>
+          <h2>让Agent追问证据，<br>不要让它替你拍板</h2>
+          <p>仓库内置一个只读学习 Skill 和五个 OpenCode 命令。Agent 会帮助你定位知识卡、挑战假设并形成一页备忘录。</p>
+          <div class="privacy-note"><span>✓</span><p><strong>先脱敏，再讨论。</strong>不要输入公司名、人名、合同原文、客户记录、账号、密钥或未公开财务信息。</p></div>
+          <a class="button button-light" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/docs/student-guide.md" target="_blank" rel="noreferrer">查看完整使用指南 <span>↗</span></a>
+        </div>
+        <div class="terminal-card" aria-label="OpenCode命令示例">
+          <div class="terminal-bar"><div><i></i><i></i><i></i></div><span>LEARNING SESSION</span></div>
+          <div class="terminal-body">
+            <p class="terminal-label">选择一个经过脱敏的工作流</p>
+            <code><b>›</b> /diagnose 供应商交付预警</code>
+            <div class="terminal-response">
+              <span class="agent-avatar">AI</span>
+              <p>先不讨论模型。这个任务希望改变什么经营结果？目前的周期、损失或人工处理量是多少？</p>
+            </div>
+            <div class="command-pills">
+              <span>/knowledge</span><span>/authorize</span><span>/challenge</span><span>/memo</span>
+            </div>
+          </div>
+          <div class="terminal-footer"><span>READ-ONLY MODE</span><span>SHARING OFF</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section start-section">
+      <div class="shell start-card">
+        <div>
+          <p class="section-number">开始第一次课后学习</p>
+          <h2>选一个真实任务，先写下自己的判断。</h2>
+          <p>再让知识卡和 Agent 帮你找出证据缺口。一次只处理一个关键不确定性。</p>
+        </div>
+        <div class="start-actions">
+          <a class="button button-primary" href="https://github.com/jinyh/ai-management-decision-kit/blob/main/templates/task-evidence.md" target="_blank" rel="noreferrer">打开任务证据表</a>
+          <a class="text-link" href="https://github.com/jinyh/ai-management-decision-kit" target="_blank" rel="noreferrer">下载完整知识库 <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>AI时代的数据治理</strong><span>管理决策知识库</span></div>
+      <p>稳定方法与动态能力分开维护 · 动态内容观察日期：2026-09-08</p>
+      <a href="https://github.com/jinyh/ai-management-decision-kit" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </footer>
+</body>
+</html>

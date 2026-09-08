@@ -1,0 +1,10 @@
+title: AI时代的数据治理：管理决策知识库
+version: 0.1.0
+language: zh-CN
+audience: 企业管理者与业务负责人
+course_date: 2026-09-19
+dynamic_facts_observed: 2026-09-08
+next_dynamic_review: 2026-09-18
+student_data_included: false
+default_mode: read-only coaching
+repository_url: https://github.com/jinyh/ai-management-decision-kit

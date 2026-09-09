@@ -20,7 +20,7 @@ flowchart LR
 
 ### 直接阅读
 
-从[知识导航](knowledge.md)选择一条角色路径，每次阅读一张知识卡，再用一个模板完成自己的判断。
+从[网页学习入口](https://jinyh.github.io/ai-management-decision-kit/)或[知识导航](knowledge.md)选择一条角色路径，每次阅读一张知识卡，再用一个模板完成自己的判断。
 
 ### 使用任意Agent
 
@@ -76,3 +76,7 @@ OpenCode会从 `.agents/skills/` 发现课程Skill。仓库不保存模型提供
 - 区分模型知识、当前上下文、企业知识、任务状态和工具权限。
 - 任何不可逆行动都要写清责任人、授权范围和停止条件。
 - 厂商发布、公开案例、课程合成情境和个人假设必须分开标识。
+
+## WEF报告与知识图谱
+
+[专题网页](https://jinyh.github.io/ai-management-decision-kit/wef.html)提供两份WEF官方PDF、建图步骤、三个管理问题及十条可追溯关系。知识卡、案例、模板和指南全部可以站内阅读。原始材料见[建图说明](docs/wef/from-reports-to-graph.md)，关系数据位于 `data/wef-graph.json`。

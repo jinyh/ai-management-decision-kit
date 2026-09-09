@@ -1,5 +1,5 @@
 title: AI时代的数据治理：管理决策知识库
-version: 0.2.0
+version: 0.3.0
 language: zh-CN
 audience: 企业管理者与业务负责人
 course_date: 2026-09-19
@@ -9,3 +9,4 @@ student_data_included: false
 default_mode: read-only coaching
 repository_url: https://github.com/jinyh/ai-management-decision-kit
 website_url: https://jinyh.github.io/ai-management-decision-kit/
+wef_graph: data/wef-graph.json

@@ -4,3 +4,5 @@
 student-work/
 *.key
 *.pem
+
+node_modules/

@@ -17,3 +17,10 @@
 | OpenCode Skill | [OpenCode Agent Skills](https://opencode.ai/docs/skills) | 用于Skill位置、发现方式和权限配置 |
 
 动态事实观察日期为2026-09-08，计划于2026-09-18再次核验。
+
+## WEF对读材料
+
+- [WEF与BCG：Data Excellence（2021）](https://www.weforum.org/publications/data-excellence-transforming-manufacturing-and-supply-systems/)，2021-01-14发布。重点核对第11–13页。
+- [WEF与Accenture：Organizational Transformation in the Age of AI（2026）](https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/)，2026-03-16发布。重点核对第8、36–37页。
+
+官方入口及课程本地原文于2026-09-09核对。图谱中的中文表述为课程转述，跨报告连接明确标为课程解释；不拼接不同调查数字形成趋势。参见[建图说明](docs/wef/from-reports-to-graph.md)。

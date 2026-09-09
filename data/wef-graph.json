@@ -1,0 +1,311 @@
+{
+  "title": "WEF报告对读关系图谱",
+  "scope": "人工核验的教学子图，非WEF官方图谱",
+  "reports": {
+    "R001": {
+      "title": "数据卓越：制造与供应体系",
+      "year": 2021,
+      "published": "2021-01-14",
+      "verified": "2026-09-09",
+      "pdf": "https://www3.weforum.org/docs/WEF_Data_Excellence_Transforming_manufacturing_2021.pdf",
+      "url": "https://www.weforum.org/publications/data-excellence-transforming-manufacturing-and-supply-systems/",
+      "pages": 21
+    },
+    "R002": {
+      "title": "AI时代的组织转型",
+      "year": 2026,
+      "published": "2026-03-16",
+      "verified": "2026-09-09",
+      "pdf": "https://reports.weforum.org/docs/WEF_Organizational_Transformation_in_the_Age_of_AI_How_Organizations_Maximize_AI%27s_Potential_2026.pdf",
+      "url": "https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/",
+      "pages": 43
+    }
+  },
+  "nodes": [
+    {
+      "id": "platform",
+      "label": "开放平台"
+    },
+    {
+      "id": "data",
+      "label": "跨系统数据共享"
+    },
+    {
+      "id": "workflow",
+      "label": "端到端工作流"
+    },
+    {
+      "id": "action",
+      "label": "AI执行"
+    },
+    {
+      "id": "owner",
+      "label": "决策责任"
+    },
+    {
+      "id": "threshold",
+      "label": "自主度阈值"
+    },
+    {
+      "id": "escalation",
+      "label": "人工升级"
+    },
+    {
+      "id": "skills",
+      "label": "数字与领域能力"
+    },
+    {
+      "id": "talent",
+      "label": "角色与激励"
+    },
+    {
+      "id": "learning",
+      "label": "运行反馈"
+    },
+    {
+      "id": "business_action",
+      "label": "业务行动"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "source": "platform",
+      "relation": "支持",
+      "target": "data",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R001",
+          "page": 12,
+          "section": "第3节·优先事项4"
+        }
+      ],
+      "paraphrase": "开放平台有助于连接分散系统和企业间的数据。",
+      "question": "谁提供订单、合同与物流证据？访问权限是否明确？",
+      "limitation": "平台连接不等于数据准确，也不保证投资回报。",
+      "card": "docs/cards/02-task-data-quality.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E02",
+      "source": "data",
+      "relation": "为其提供输入",
+      "target": "workflow",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "report": "R001",
+          "page": 12,
+          "section": "第3节·优先事项4"
+        },
+        {
+          "report": "R002",
+          "page": 36,
+          "section": "原则2"
+        }
+      ],
+      "paraphrase": "将数据跨系统取用与围绕共同结果重构工作流联系起来。",
+      "question": "数据打通后，交接、责任和业务口径还需要怎样调整？",
+      "limitation": "这是跨报告的课程连接，不是两份报告共同证明的因果关系。",
+      "card": "docs/cards/06-common-language-and-ontology.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E03",
+      "source": "workflow",
+      "relation": "由其协同支持",
+      "target": "action",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 36,
+          "section": "原则2"
+        }
+      ],
+      "paraphrase": "报告讨论智能体在人类监督下协同跨工作流活动。",
+      "question": "流程中哪一步需要动态判断，哪一步用固定规则更稳妥？",
+      "limitation": "报告描述方向，不证明任何具体智能体已具备这些能力。",
+      "card": "docs/cards/07-agent-loop-and-state.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E04",
+      "source": "action",
+      "relation": "必须明确",
+      "target": "owner",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 36,
+          "section": "原则1"
+        }
+      ],
+      "paraphrase": "当AI参与分析、执行和决策时，结果责任仍由人承担。",
+      "question": "谁对订单变更后果负责？实施人员是否有权批准？",
+      "limitation": "经营责任不能由模型能力或技术实施角色替代。",
+      "card": "docs/cards/09-human-authorization-and-recovery.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E05",
+      "source": "action",
+      "relation": "受其约束",
+      "target": "threshold",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 36,
+          "section": "原则1"
+        }
+      ],
+      "paraphrase": "规模化部署前、中、后均需明确自主度阈值。",
+      "question": "哪些动作允许自动执行，哪些必须事先批准？",
+      "limitation": "报告未给出适用于所有企业的金额或置信度阈值。",
+      "card": "docs/cards/08-tools-protocols-and-permissions.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E06",
+      "source": "threshold",
+      "relation": "触发",
+      "target": "escalation",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 8,
+          "section": "图1·客户体验转变3"
+        }
+      ],
+      "paraphrase": "客户服务示例将退款边界、重复投诉和高价值交易与升级或人工复核联系起来。",
+      "question": "触发条件满足时，谁接管、看到什么证据？",
+      "limitation": "来自客户体验示例；迁移到采购等场景需重设规则。",
+      "card": "docs/cards/09-human-authorization-and-recovery.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E07",
+      "source": "skills",
+      "relation": "支持",
+      "target": "business_action",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R001",
+          "page": 11,
+          "section": "第3节·优先事项3"
+        }
+      ],
+      "paraphrase": "数字能力与制造业知识结合，有助于把分析结果转成具体行动。",
+      "question": "团队是否同时懂业务后果与数据技术？",
+      "limitation": "2021年的行动指广义业务行动，此处不把它等同于自主智能体执行。",
+      "card": "docs/cards/11-build-buy-and-fde.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E08",
+      "source": "skills",
+      "relation": "延伸到",
+      "target": "talent",
+      "kind": "interpretation",
+      "evidence": [
+        {
+          "report": "R001",
+          "page": 11,
+          "section": "第3节·优先事项3"
+        },
+        {
+          "report": "R002",
+          "page": 37,
+          "section": "原则3"
+        }
+      ],
+      "paraphrase": "将早期能力建设要求与AI规模化中的角色、激励和学习机制做对读。",
+      "question": "是采购工具不足，还是岗位能力、激励或责任设计不足？",
+      "limitation": "属于课程解释；不能据此推断必须采用FDE或某种组织形式。",
+      "card": "docs/cards/11-build-buy-and-fde.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E09",
+      "source": "talent",
+      "relation": "通过其持续调整",
+      "target": "learning",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 37,
+          "section": "原则3"
+        }
+      ],
+      "paraphrase": "角色与工作方式的变化结合短学习周期、频繁反馈和真实使用数据。",
+      "question": "试点反馈如何进入培训、角色分工与流程修改？",
+      "limitation": "需落实到企业自身记录，而非仅增加培训次数。",
+      "card": "docs/cards/10-four-layer-evaluation.md",
+      "verified": "2026-09-09"
+    },
+    {
+      "id": "E10",
+      "source": "learning",
+      "relation": "用于修订",
+      "target": "threshold",
+      "kind": "report",
+      "evidence": [
+        {
+          "report": "R002",
+          "page": 37,
+          "section": "原则5"
+        }
+      ],
+      "paraphrase": "自主度阈值、决策策略和升级规则应随实际表现调整。",
+      "question": "什么失败会收紧权限？什么证据支持扩大范围？",
+      "limitation": "真实表现需要代表性评测；少数成功案例不足以放宽权限。",
+      "card": "docs/cards/12-evidence-gates-and-memo.md",
+      "verified": "2026-09-09"
+    }
+  ],
+  "questions": [
+    {
+      "id": "authorize",
+      "label": "数据打通后，AI就能执行吗？",
+      "edges": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "answer": "先检查数据与工作流，再分别确定责任人、动作范围和升级条件；接通数据只是其中一步。",
+      "template": "templates/action-authorization.md"
+    },
+    {
+      "id": "team",
+      "label": "团队需要哪些能力与角色？",
+      "edges": [
+        "E07",
+        "E08",
+        "E09"
+      ],
+      "answer": "把数字能力、领域经验、岗位责任与反馈机制一起审查。FDE是实施选择之一，不是经营责任的替代者。",
+      "template": "templates/task-evidence.md"
+    },
+    {
+      "id": "scale",
+      "label": "什么证据支持扩大试点？",
+      "edges": [
+        "E05",
+        "E06",
+        "E09",
+        "E10"
+      ],
+      "answer": "用真实运行反馈修订自主度与升级规则；明确什么证据支持扩大范围、什么失败要求停止。",
+      "template": "templates/investment-memo.md"
+    }
+  ]
+}

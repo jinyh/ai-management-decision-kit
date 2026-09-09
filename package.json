@@ -1,0 +1,16 @@
+{
+  "name": "ai-management-decision-kit",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "check": "python3 scripts/check-site.py"
+  },
+  "dependencies": {
+    "marked": "17.0.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

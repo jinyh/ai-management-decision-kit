@@ -29,6 +29,10 @@ Agent和学习者都应从本页定位材料，只读取当前任务需要的卡
 - [行动授权表](templates/action-authorization.md)
 - [投资决策备忘录](templates/investment-memo.md)
 
+## WEF报告与知识图谱
+
+阅读[两份WEF报告如何形成知识图谱](docs/wef/from-reports-to-graph.md)，或打开[交互示范](https://jinyh.github.io/ai-management-decision-kit/wef.html)。学习Agent可按需读取 `data/wef-graph.json`，沿关系ID查看证据与管理问题；区分报告主张和课程解释。
+
 ## 动态内容
 
 模型发布、Agent能力和产品开放范围会变化。需要讨论当前状态时，先读[前沿内容说明](docs/frontier/README.md)，再核对带日期的事实卡和官方来源。

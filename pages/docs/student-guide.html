@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>学生使用指南｜AI时代的数据治理</title><link rel="icon" href="../../assets/decision-mark.svg"><link rel="stylesheet" href="../../assets/site.css"><script src="../../assets/site.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../index.html#paths">学习路径</a><a href="../../index.html#library">知识卡</a><a href="../../wef.html">WEF与知识图谱</a><a href="student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">不安装工具也可以学习</a><a href="#section-2">使用OpenCode</a><a href="#section-3">选择哪个命令</a><a href="#section-4">没有正常加载时</a><a href="#section-5">企业信息保护</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>学生使用指南</h1>
+<h2 id="section-1">不安装工具也可以学习</h2>
+<p>从 <code>knowledge.md</code> 选择角色路径，阅读一张知识卡，再填写一个模板。也可以把整个文件夹交给任何获企业允许、能够读取本地文件的Agent，并请它先阅读 <code>AGENTS.md</code>。</p>
+<p>第一次建议完成以下闭环：</p>
+<ol>
+<li>选择一个不含企业敏感信息的工作流。</li>
+<li>先填写任务名称、经营结果和当前做法。</li>
+<li>让Agent只推荐两到三张知识卡。</li>
+<li>回答Agent的问题并修订一次初步判断。</li>
+<li>保存一份投资备忘录或行动授权表。</li>
+</ol>
+<h2 id="section-2">使用OpenCode</h2>
+<ol>
+<li>根据OpenCode官方文档在个人电脑安装OpenCode。</li>
+<li>解压本知识库并进入根目录。</li>
+<li>在OpenCode中连接自己获准使用的模型提供商；不要把API Key写入仓库文件。</li>
+<li>在根目录运行 <code>opencode .</code>。</li>
+<li>输入 <code>/diagnose 任务名称</code>。OpenCode应能发现 <code>ai-management-decision-coach</code> skill和五个课程命令。</li>
+</ol>
+<p>本仓库配置为只读学习模式：Agent不能编辑文件或运行命令，联网需要你再次同意，会话分享默认关闭。需要保存结果时，请从对话复制到自己的安全文档。</p>
+<h2 id="section-3">选择哪个命令</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>你的问题</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>这个任务是否适合AI？</td>
+<td><code>/diagnose</code></td>
+</tr>
+<tr>
+<td>需要哪些制度、定义和例外？</td>
+<td><code>/knowledge</code></td>
+</tr>
+<tr>
+<td>AI可以行动到哪一步？</td>
+<td><code>/authorize</code></td>
+</tr>
+<tr>
+<td>方案最薄弱的证据是什么？</td>
+<td><code>/challenge</code></td>
+</tr>
+<tr>
+<td>怎样形成一页决策材料？</td>
+<td><code>/memo</code></td>
+</tr>
+</tbody></table></div>
+<h2 id="section-4">没有正常加载时</h2>
+<ul>
+<li>确认当前目录是本知识库根目录，能够看到 <code>knowledge.md</code>。</li>
+<li>确认Skill文件位于 <code>.agents/skills/ai-management-decision-coach/SKILL.md</code>。</li>
+<li>退出并重新启动OpenCode，使新的项目配置生效。</li>
+<li>仍无法发现时，可以直接要求Agent阅读上述Skill文件；核心学习内容不依赖某一个工具。</li>
+</ul>
+<h2 id="section-5">企业信息保护</h2>
+<p>将真实信息改写成角色、区间和合成数据。例如，把企业名改成“某制造企业”，把精确金额改成范围，把合同原文改成规则摘要。不要输入个人信息、客户记录、薪酬、医疗信息、账号、密钥、未公开财务信息或当前正式审批材料。</p>
+<div class="reader-end"><a href="../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

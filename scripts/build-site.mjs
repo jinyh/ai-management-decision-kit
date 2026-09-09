@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -12,7 +13,7 @@ const titles=Object.fromEntries(sources.map(s=>[s,read(s).match(/^# (.+)$/m)?.[1
 const links=(s,from='index.html')=>path.posix.relative(path.posix.dirname(from),dest(s));
 function frame(title,body,file,extra='') {
  const home=path.posix.relative(path.posix.dirname(file),'index.html') || 'index.html';
- const asset=n=>path.posix.relative(path.posix.dirname(file),'assets/'+n);
+ const asset=n=>path.posix.relative(path.posix.dirname(file),'assets/'+n)+'?v='+createHash('sha256').update(read('assets/'+n)).digest('hex').slice(0,10);
  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>${esc(title)}｜AI时代的数据治理</title><link rel="icon" href="${asset('decision-mark.svg')}"><link rel="stylesheet" href="${asset('site.css')}"><script src="${asset('site.js')}" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="${home}">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="${home}#paths">学习路径</a><a href="${home}#library">知识卡</a><a href="${path.posix.relative(path.posix.dirname(file),'wef.html')}">WEF与知识图谱</a><a href="${links('docs/student-guide.md',file)}">学习指南</a></nav></div></header>${body}<footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="${links('sources.md',file)}">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer>${extra}</body></html>`;
 }
 const write=(p,s)=>{fs.mkdirSync(path.dirname(path.join(root,p)),{recursive:true});fs.writeFileSync(path.join(root,p),s)};

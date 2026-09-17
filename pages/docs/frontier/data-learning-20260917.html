@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>数据与学习：2026年9月研究专题｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">Snorkel：从标签到训练环境</a><a href="#section-2">金融任务：4B与235B比较的范围</a><a href="#section-3">数据配比与低数据量学习</a><a href="#section-4">复习与更新</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>数据与学习：2026年9月研究专题</h1>
+<p>核验日期：2026-09-17。稳定方法见C13—C15；本页保存会变化的研究与产品案例，厂商报告不等于独立验证。</p>
+<h2 id="section-1">Snorkel：从标签到训练环境</h2>
+<p><a href="https://docs.snorkel.ai/docs/25.4/user-guide/intro/active-learning-weak-supervision/">主动学习与弱监督文档</a>说明两种方法的互补：规则提供规模化监督，主动学习选择值得人工审核的样本。当前文档版本25.4，不据此断言是最新产品版本。</p>
+<p><a href="https://snorkel.ai/blog/enterprise-environments-ai-agents/">企业智能体环境</a>（2026-08-03）将任务、工具、状态、政策与验证条件组织成可训练和评测的环境。这是厂商方法说明，课程将其用于解释为什么“有数据”还不等于“有可学习的反馈”。</p>
+<h2 id="section-2">金融任务：4B与235B比较的范围</h2>
+<p><a href="https://snorkel.ai/blog/how-tool-discipline-let-a-4b-model-outsmart-a-235b-giant-on-financial-tasks/">Snorkel金融工具训练案例</a>（2026-02-18）报告：经针对性强化学习的Qwen3-4B-Instruct-2507在该文指定金融工具使用评测中超过所比较的Qwen3-235B-A22B。训练针对金融任务与工具纪律，Snorkel提供任务／环境等支持，训练使用Berkeley rLLM。</p>
+<p>教学主张是“针对任务的数据、环境和反馈可改善行为”。不能推广为4B模型在所有金融任务、所有评测或总体能力上胜过235B；也不能把单次算力成本写成企业项目总成本。本课程的订单Q-learning实验解释基本机制，不复现该研究。</p>
+<h2 id="section-3">数据配比与低数据量学习</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>研究</th>
+<th>可以支持的课堂主张</th>
+<th>需要保留的范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://arxiv.org/abs/2602.12237">Olmix</a>，2026-02</td>
+<td>数据混合比例本身是可优化的训练选择</td>
+<td>结论来自论文设定与评测，不能代替本企业对数据配比的试验</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2604.18381">Learning from Less</a>，2026-04</td>
+<td>低数据量RLVR可研究任务难度与样本效率的关系</td>
+<td>三类程序化任务；不能推导出“任何业务都只需少量数据”</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2604.01375">RIFT</a>，2026-04</td>
+<td>奖励或评分规则需要检查故障与偏差</td>
+<td>基于论文实验设定；评分成功不等于业务结果完整</td>
+</tr>
+</tbody></table></div>
+<h2 id="section-4">复习与更新</h2>
+<p>把每条新结果拆成任务、数据、基线、训练方式、评测、限制六项。更新案例时保留原始来源及核验日；若只有厂商报告，继续标为厂商报告。下一次核验建议在课前进行，不自动改变稳定原理。</p>
+<p>关联：<a href="../cards/13-active-learning-and-weak-supervision.html">C13 主动学习与弱监督</a>｜<a href="../cards/14-synthetic-data-demonstrations-preferences.html">C14 合成数据、示范与偏好</a>｜<a href="../cards/15-reinforcement-learning-environments-rewards.html">C15 强化学习、环境与奖励</a>。</p>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

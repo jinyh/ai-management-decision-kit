@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>强化学习、环境与奖励｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">自测与动态实验</a><a href="#section-6">来源与关联</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>强化学习、环境与奖励</h1>
+<h2 id="section-1">一句核心思想</h2>
+<p>强化学习让智能体尝试行动，观察结果与奖励，更新行动策略，以提高长期累计回报。</p>
+<h2 id="section-2">机制图</h2>
+<ol class="learning-steps"><li>观察当前状态</li><li>按策略行动，适度探索</li><li>环境转移并给出奖励</li><li>更新行动回报估计与策略</li><li>在后续任务中继续尝试</li></ol>
+
+<p>状态描述当前可用信息；行动是环境允许的选择；策略决定如何选行动。奖励是学习信号，累计回报同时考虑后续奖励，因而可以学习需要多步才能体现价值的行动。探索会尝试尚不确定的选择，评测时应关闭探索并停止学习。</p>
+<p>本实验使用Q-learning：把某状态下某行动的估计向“即时奖励＋折扣后的下一状态最佳估计”移动；终止状态没有后续回报。它是表格算法，不是训练大语言模型。</p>
+<h2 id="section-3">供应商例子</h2>
+<p>课程合成：先核实订单是否紧急，再选择常规跟进、加急或转人工，经过等待才能观察交付结果。若奖励“尽快结束”，提前结束也能拿高分；若奖励实际完成并扣除成本，策略会改变。实际完成率、延迟、提前结束和处置成本必须独立报告。</p>
+<p>授权由环境硬性限制：未授权时不能选加急。不能只给违规一个负奖励，却仍允许实际执行。未知订单类型必须先查询，模型不直接读取隐藏信息。</p>
+<h2 id="section-4">使用条件与常见误判</h2>
+<ul>
+<li>有明确状态、动作、转移、终止条件以及可验证结果，能安全地进行多轮试验。</li>
+<li>能检查奖励与真实经营目标是否一致，记录失败和恢复成本。</li>
+<li>一次工具调用或固定规则执行属于推理与运行；只有利用反馈更新策略才构成这里讨论的学习。</li>
+<li>RLHF的人类反馈和RLVR的可验证奖励都可能覆盖不全；评分提高并不自动证明实际完成率提高。</li>
+<li>模拟环境中的成功需经过新任务、分布变化、权限与上线回归评测。</li>
+</ul>
+<h2 id="section-5">自测与动态实验</h2>
+<p>打开<a href="https://jinyh.github.io/supplier-learning-lab/#learning-reinforcement">强化学习实验</a>。训练前预测两套奖励将鼓励什么行为。分别训练至500轮，比较关闭探索后的相同200个评测任务；解释奖励、实际完成、提前结束和成本为何可能不同。</p>
+<p>再用“单步观察”找出一个即时奖励很低但有助于后续决策的动作。训练表现与当前策略评测为什么不同？实验是“真实算法、合成环境、简化模型”，不复现Snorkel金融研究。</p>
+<h2 id="section-6">来源与关联</h2>
+<ul>
+<li><a href="https://www.gatsby.ucl.ac.uk/~dayan/papers/wd92.html">Watkins与Dayan：Q-learning</a>，1992。</li>
+<li><a href="../frontier/data-learning-20260917.html">Snorkel金融工具训练研究及实验边界</a>，动态案例，核验2026-09-17。</li>
+<li>关联：<a href="07-agent-loop-and-state.html">智能体循环</a>｜<a href="09-human-authorization-and-recovery.html">人工授权与恢复</a>｜<a href="10-four-layer-evaluation.html">四层评测</a>｜<a href="14-synthetic-data-demonstrations-preferences.html">示范与偏好</a>。</li>
+</ul>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

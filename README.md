@@ -60,7 +60,7 @@ OpenCode会从 `.agents/skills/` 发现课程Skill。仓库不保存模型提供
 
 ## 内容结构
 
-- `docs/cards/`：12张管理知识卡。
+- `docs/cards/`：15张管理知识卡。
 - `docs/paths/`：管理者、制造运营、销售服务、财务人力四条路径。
 - `docs/cases/`：供应商流程与客户退款两个脱敏案例。
 - `docs/frontier/`：按日期维护的AI能力观察，不与稳定方法混写。

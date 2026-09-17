@@ -5,3 +5,5 @@
 @media print{header,footer,aside,.actions,.question-tabs,.edge-buttons,.skip{display:none!important}.wrap{width:100%}.reader-layout{display:block;padding:0}.prose{max-width:none}.prose h1{font-size:26px}.prose h2{font-size:20px}body{font-size:12px}.table-scroll{overflow:visible}.table-scroll table{min-width:0;font-size:10px}th,td{min-width:0;padding:5px}a{color:inherit}.section{padding:20px 0}.graph-layout{display:block}#knowledge-graph{min-width:0}details{break-inside:avoid}h2,h3{break-after:avoid}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .graph-layout>div{min-width:0}
+
+.learning-steps{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}.learning-steps li{padding:.7rem 1rem;background:#edf3f5;border-left:3px solid #24766b}.learning-steps li:not(:last-child)::after{content:" →";color:#24766b}

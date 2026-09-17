@@ -15,3 +15,7 @@
 能够用一页说明：为什么做、现在知道什么、还不知道什么、下一笔资源买什么证据、什么情形停止。
 
 建议命令：`/challenge 你的AI投资方案`，然后使用[投资决策备忘录](../../templates/investment-memo.md)。
+
+## 数据与学习选读路线
+
+保留上面的五张核心卡。需要设计学习闭环时，加读[C13 主动学习与弱监督](../cards/13-active-learning-and-weak-supervision.md) → [C14 合成数据、示范与偏好](../cards/14-synthetic-data-demonstrations-preferences.md) → [C15 强化学习、环境与奖励](../cards/15-reinforcement-learning-environments-rewards.md)。先预测实验结果，再操作并解释观察；最后写出专家预算、真实结果指标、授权边界与下一次独立评测。

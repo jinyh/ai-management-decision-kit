@@ -24,3 +24,7 @@
 - [WEF与Accenture：Organizational Transformation in the Age of AI（2026）](https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/)，2026-03-16发布。重点核对第8、36–37页。
 
 官方入口及课程本地原文于2026-09-09核对。图谱中的中文表述为课程转述，跨报告连接明确标为课程解释；不拼接不同调查数字形成趋势。参见[建图说明](docs/wef/from-reports-to-graph.md)。
+
+## 数据与学习来源（2026-09-17）
+
+见[研究专题](docs/frontier/data-learning-20260917.md)及[C13](docs/cards/13-active-learning-and-weak-supervision.md)、[C14](docs/cards/14-synthetic-data-demonstrations-preferences.md)、[C15](docs/cards/15-reinforcement-learning-environments-rewards.md)的原始来源。稳定方法与动态研究分开维护；Snorkel案例为厂商报告，课程实验为合成教学环境。

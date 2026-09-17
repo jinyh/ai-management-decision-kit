@@ -32,3 +32,7 @@ title: 任务型数据质量
 - 只修输入字段，不保留判断依据和运行结果。
 
 关联：[错误代价](03-error-cost-and-evaluation.md)｜[上下文与企业知识](04-context-and-enterprise-knowledge.md)
+
+## 数据与学习的边界
+
+质量检查还应覆盖标签定义、样本选择、数据配比和独立测试集。将预警时证据、加急干预、实际准时结果分别保存；未经观察的反事实不能当成已知标签。参见[C13 主动学习与弱监督](13-active-learning-and-weak-supervision.md)与[C14 数据与学习信号](14-synthetic-data-demonstrations-preferences.md)。

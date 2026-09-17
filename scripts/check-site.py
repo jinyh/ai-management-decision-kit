@@ -34,6 +34,13 @@ for path, p in pages.items():
         if target.suffix == '.md': errors.append(f'{path.name}: raw Markdown link {ref}')
         if u.fragment and target in pages and u.fragment not in pages[target].ids:
             errors.append(f'{path.name}: missing anchor {ref}')
+cards = sorted((ROOT/'docs/cards').glob('*.md'))
+if len(cards) != 15: errors.append('expected 15 knowledge cards')
+for card in cards:
+    generated = 'pages/docs/cards/'+card.stem+'.html'
+    if generated not in pages[(ROOT/'index.html').resolve()].refs: errors.append('card absent from homepage: '+card.stem)
+for number in ('13-', '14-', '15-'):
+    if number not in (ROOT/'knowledge.md').read_text(): errors.append('new card absent from navigation: '+number)
 g = json.loads((ROOT/'data/wef-graph.json').read_text())
 nodes = {n['id'] for n in g['nodes']}; edges = {e['id']: e for e in g['edges']}
 if len(nodes) != len(g['nodes']) or len(edges) != len(g['edges']): errors.append('duplicate graph IDs')

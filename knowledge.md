@@ -36,3 +36,13 @@ Agent和学习者都应从本页定位材料，只读取当前任务需要的卡
 ## 动态内容
 
 模型发布、Agent能力和产品开放范围会变化。需要讨论当前状态时，先读[前沿内容说明](docs/frontier/README.md)，再核对带日期的事实卡和官方来源。
+
+## 数据与学习（选读）
+
+| 管理问题 | 先读 | 需要时再读 |
+|---|---|---|
+| 专家标注预算有限，先标哪些？ | [C13 主动学习与弱监督](docs/cards/13-active-learning-and-weak-supervision.md) | C02、C10 |
+| 如何补齐能力缺口？ | [C14 合成数据、示范与偏好](docs/cards/14-synthetic-data-demonstrations-preferences.md) | C02、C13 |
+| 奖励会让系统学会什么？ | [C15 强化学习、环境与奖励](docs/cards/15-reinforcement-learning-environments-rewards.md) | C07、C10 |
+
+[2026年9月研究专题：Snorkel、Olmix与低数据量RLVR](docs/frontier/data-learning-20260917.md)。原五张核心卡路径保持不变，新增三张为选读。

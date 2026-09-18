@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>共同语言、知识图谱与Ontology｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">三个层次</a><a href="#section-3">管理决定</a><a href="#section-4">同一笔订单上的技术分工</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>共同语言、知识图谱与Ontology</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>共同语言、知识图谱与Ontology｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">三个层次</a><a href="#section-3">管理决定</a><a href="#section-4">同一笔订单上的技术分工</a><a href="#section-5">方法年份与生产能力</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>共同语言、知识图谱与Ontology</h1>
 <h2 id="section-1">管理结论</h2>
 <p>跨部门AI问题经常不是“模型不懂”，而是企业没有统一对象、口径、关系和责任。</p>
 <h2 id="section-2">三个层次</h2>
@@ -25,4 +25,37 @@
 <li>业务规则和动作执行另行检查当前授权。关系图与验证报告都不会自动修改订单。</li>
 </ul>
 <p>跨源连接前还需实体对齐。AI可比较名称、地址等字段并提出匹配候选，法人标识冲突则核对登记。研究依据：<a href="https://arxiv.org/html/2004.00584v3">Ditto，2020</a>；约束验证依据：<a href="https://www.w3.org/TR/shacl/">W3C SHACL</a>。订单与匹配名称为课程合成。</p>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<h2 id="section-5">方法年份与生产能力</h2>
+<p>Ditto（2020）是实体匹配方法来源，不是整幅企业架构的出处。<a href="https://docs.aws.amazon.com/entityresolution/latest/userguide/create-matching-workflow.html">AWS Entity Resolution</a>已提供规则、机器学习及服务商匹配工作流。企业上线仍要实测误合并、漏匹配，并建立冲突复核责任。</p>
+<p>SHACL是“检查图数据是否满足声明条件的约束语言”，2017年为W3C标准发布年份。它可以检查字段、类型和关系条件，不能证明原始事实真实，也不授予业务操作权限。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>数据字典、对象表与决策表</th>
+<th>知识图谱与Ontology</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关系复杂度</td>
+<td>固定关系、局部任务便于起步</td>
+<td>适合多类对象与复杂跨源关系</td>
+</tr>
+<tr>
+<td>语义复用</td>
+<td>按表与应用维护口径</td>
+<td>显式类型与关系可跨任务复用</td>
+</tr>
+<tr>
+<td>维护能力</td>
+<td>业务和数据团队易于共同审查</td>
+<td>需持续维护语义、约束与映射</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>初期通常较轻，跨域后需维护多处映射</td>
+<td>初期建模与治理投入较高，复用收益需实测</td>
+</tr>
+</tbody></table></div>
+<p>两种表示可以组合。先按任务确定关系复杂度与团队维护能力，再决定范围；标准年份不能替代成熟度判断。以上选型比较是课程归纳，官方能力核验2026-09-18。</p>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

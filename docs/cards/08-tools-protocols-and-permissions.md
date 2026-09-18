@@ -26,3 +26,7 @@ MCP、A2A等协议可以降低连接成本，但协议存在不代表企业已�
 选择一个“提交订单”动作，分别写出读取权限、生成建议权限和真正提交权限由谁授予。
 
 关联：[智能体循环](07-agent-loop-and-state.md)｜[人工授权与恢复](09-human-authorization-and-recovery.md)
+
+## A2P2的解释与范围
+
+智能体自主支付协议（Agent Autonomous Payment Protocol，A2P2）可用“限定金额和购买范围、核对本次请求、保留结果证据”理解。[北京经开区2026-06-26报道](https://kfqgw.beijing.gov.cn/ywdt/gdcyfzgd/zncx/202606/t20260626_4726178.html)介绍京东的协议设计。报道不能证明它已成为全行业统一标准，也不能代替本企业对支付结果和授权的验证。核验2026-09-18。

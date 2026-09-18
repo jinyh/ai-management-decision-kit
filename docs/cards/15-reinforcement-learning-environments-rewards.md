@@ -57,3 +57,5 @@ title: 强化学习、环境与奖励
 - [Watkins与Dayan：Q-learning](https://www.gatsby.ucl.ac.uk/~dayan/papers/wd92.html)，1992。
 - [Snorkel金融工具训练研究及实验边界](../frontier/data-learning-20260917.md)，动态案例，核验2026-09-17。
 - 关联：[智能体循环](07-agent-loop-and-state.md)｜[人工授权与恢复](09-human-authorization-and-recovery.md)｜[四层评测](10-four-layer-evaluation.md)｜[示范与偏好](14-synthetic-data-demonstrations-preferences.md)。
+
+论文出处：[Echoverse，Microsoft Research，2026](https://arxiv.org/abs/2607.28074)。课堂图为课程改绘，验证器对照为简化演示，不作为论文复现。运行时核验是否完成，训练时还可将核验结果转成学习信号。核验2026-09-18。

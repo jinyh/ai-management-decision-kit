@@ -82,3 +82,5 @@ OpenCode会从 `.agents/skills/` 发现课程Skill。仓库不保存模型提供
 [专题网页](https://jinyh.github.io/ai-management-decision-kit/wef.html)提供两份WEF官方PDF、建图步骤、三个管理问题及十条可追溯关系。知识卡、案例、模板和指南全部可以站内阅读。原始材料见[建图说明](docs/wef/from-reports-to-graph.md)，关系数据位于 `data/wef-graph.json`。
 
 选读：先用[C07](docs/cards/07-agent-loop-and-state.md)区分知识、经验与参数更新，再用[C10](docs/cards/10-four-layer-evaluation.md)检查完成条件与能力退化；[C14](docs/cards/14-synthetic-data-demonstrations-preferences.md)讨论蒸馏，[C15](docs/cards/15-reinforcement-learning-environments-rewards.md)讨论训练环境。核验2026-09-18。
+
+版本v0.6.1，配套课件v0.11.0。2026-09-18修订计算说明、来源边界、知识库与Skill案例、学习信号及有条件决策。知识卡保持15张。

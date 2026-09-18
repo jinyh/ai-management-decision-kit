@@ -57,3 +57,17 @@ Google的Retrieve-for-Train研究把强化学习训练的4B模型用于生成集
 - [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)，2023，方法论文。
 - [Olmix](https://arxiv.org/abs/2602.12237)，2026，数据混合研究；[Learning from Less](https://arxiv.org/abs/2604.18381)，2026，低数据量RLVR研究。适用范围见[数据与学习研究专题](../frontier/data-learning-20260917.md)。
 - 关联：[企业知识](04-context-and-enterprise-knowledge.md)｜[主动学习与弱监督](13-active-learning-and-weak-supervision.md)｜[强化学习、环境与奖励](15-reinforcement-learning-environments-rewards.md)。来源核验2026-09-17。
+
+## 审核与蒸馏的不同作用
+
+审核是数据质量控制，蒸馏是训练方法，不能把二者合成同一个阶段。主流程为发现缺口、生成或收集候选、审核并设置配比、独立检验。采用蒸馏时，具体展开为教师生成训练材料、审核、训练学生模型、独立评测。Olmix支持数据配比研究，整个企业流程是课程归纳。
+
+## 同一项获准加急任务的三份材料
+
+| 方法 | 训练材料 | 发生的变化 |
+|---|---|---|
+| SFT | 正确轨迹：核对订单与授权、提交加急、检查回执 | 调整模型参数以模仿示范行为 |
+| DPO | 同一输入的两份答案：证据与授权完整的优于遗漏依据的 | 用偏好对调整相对输出倾向；训练时无需在线环境交互 |
+| RL | 行动轨迹、最终状态和奖励：完成结果同时计入延迟与成本 | 通过尝试与反馈更新策略，以提高长期累计回报 |
+
+先比较材料再判断方法。课堂Q-learning更新Q表，演示学习机制；它没有训练大语言模型。

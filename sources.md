@@ -9,14 +9,14 @@
 | 企业知识 | [Google Cloud Knowledge Catalog](https://cloud.google.com/blog/products/data-analytics/introducing-the-google-cloud-knowledge-catalog) | 产品发布；不证明客户收益 |
 | Ontology通用定义 | [W3C OWL 2 Overview](https://www.w3.org/TR/owl2-overview/) | 用于对象、属性和关系的通用边界 |
 | Ontology产品实现 | [Palantir Foundry introductory concepts](https://www.palantir.com/docs/foundry/getting-started/introductory-concepts) | 产品实现示例，不等于Ontology的一般定义 |
-| Agent运行 | [Anthropic Scaling long-running autonomous coding](https://www.anthropic.com/engineering/managed-agents) | 厂商工程实践；用于解释运行状态与接管 |
+| Agent运行 | [Anthropic Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/engineering/managed-agents) | 厂商工程实践；用于解释运行状态与接管 |
 | 连接协议 | [MCP 2026-07更新](https://blog.modelcontextprotocol.io/posts/2026-07-28/) | 协议能力不等于企业授权和治理 |
 | 支付授权方向 | [北京经开区：京东A2P2](https://kfqgw.beijing.gov.cn/ywdt/gdcyfzgd/zncx/202606/t20260626_4726178.html) | 设计方向；不声称已形成独立验证的大规模生产成效 |
-| Agent事故 | [Hugging Face披露](https://huggingface.co/blog/security-incident-july-2026)、[技术时间线](https://huggingface.co/blog/agent-intrusion-technical-timeline)、[OpenAI说明](https://openai.com/index/hugging-face-model-evaluation-security-incident/) | 区分攻击模型组合、防守取证模型和运行环境；不推断未披露损失 |
+| Agent事故 | [Hugging Face披露](https://huggingface.co/blog/security-incident-july-2026)、[技术时间线](https://huggingface.co/blog/agent-intrusion-technical-timeline)、[OpenAI说明](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) | 区分攻击模型组合、防守取证模型和运行环境；不推断未披露损失 |
 | 测试事件 | [UK AISI incident report](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing) | 与Hugging Face事件不是同一事件或同一种机制 |
 | OpenCode Skill | [OpenCode Agent Skills](https://opencode.ai/docs/skills) | 用于Skill位置、发现方式和权限配置 |
 
-动态事实观察日期为2026-09-08，计划于2026-09-18再次核验。
+模型、A2P2、事故、本轮研究、Azure agentic retrieval、Google Knowledge Catalog、MCP及Managed Agents官方来源于2026-09-18复核。稳定方法按原文年份引用，产品能力按下列具体接口与功能范围解释。
 
 ## WEF对读材料
 
@@ -28,3 +28,10 @@
 ## 数据与学习来源（2026-09-17）
 
 见[研究专题](docs/frontier/data-learning-20260917.md)及[C13](docs/cards/13-active-learning-and-weak-supervision.md)、[C14](docs/cards/14-synthetic-data-demonstrations-preferences.md)、[C15](docs/cards/15-reinforcement-learning-environments-rewards.md)的原始来源。稳定方法与动态研究分开维护；Snorkel案例为厂商报告，课程实验为合成教学环境。
+
+## 产品状态的具体范围（核验2026-09-18）
+
+- Azure文档更新2026-09-17：2026-04-01正式接口支持minimal、extractive retrieval；LLM查询规划、更高推理及答案合成使用2026-08-01-preview。门户仍含预览流程。[官方文档](https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview)
+- Google Knowledge Catalog（2026-04-22）：元数据聚合、data products、semantic search等正式提供；企业知识连接、BigQuery measures、多模态提取、自动上下文整理与verified queries等处于预览。按功能逐项核对，不能把整个产品统称正式或预览。[官方公告](https://cloud.google.com/blog/products/data-analytics/introducing-the-google-cloud-knowledge-catalog)
+- MCP 2026-07-28：无状态核心、授权要求、Tasks扩展与人工输入等协议变化不替代企业授权。[官方更新](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+- Managed Agents（2026-04-08）将harness、session、sandbox分开，并讨论凭据和恢复边界；工程机制不证明客户ROI。[官方工程文章](https://www.anthropic.com/engineering/managed-agents)

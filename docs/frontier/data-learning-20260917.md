@@ -39,3 +39,5 @@
 | [Nested Learning](https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/)，Google，2025-11-07 | 持续学习与不同时间尺度的更新值得跟踪 | 前沿选读；HOPE为概念验证，不讲成已成熟的企业在线自学习能力 |
 
 推荐顺序：先读C07区分更新对象，再读C15理解环境，最后用C10检查验证器和能力退化。蒸馏选读C14。新增内容不增加核心知识卡数量，也不改变课前阅读包。
+
+论文出处：[Echoverse，Microsoft Research，2026](https://arxiv.org/abs/2607.28074)。课堂图为课程改绘，验证器对照为简化演示，不作为论文复现。运行时核验是否完成，训练时还可将核验结果转成学习信号。核验2026-09-18。

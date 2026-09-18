@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>长上下文：位置、材料与任务条件｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">2026年位置控制实验</a><a href="#section-2">历史图：Lost in the Middle</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>长上下文：位置、材料与任务条件</h1>
+<blockquote>
+<p>来源核验：2026-09-18。稳定原理是按任务验证证据使用；以下模型数值是特定研究快照。</p>
+</blockquote>
+<h2 id="section-1">2026年位置控制实验</h2>
+<p><a href="https://arxiv.org/html/2605.23170v1">Zhang等：Positional Failures in Long-Context LLMs</a>，2026-05-22预印本。下表摘自Table 1、16：GSM8K、64K上下文、每条件50题、seed 42。比较目标问题在末尾或中间的准确率，不混用不同长度。前三个模型启用推理，GLM-5.1按论文默认关闭推理。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th align="right">带解答干扰：末尾</th>
+<th align="right">中间</th>
+<th align="right">变化（百分点）</th>
+<th align="right">仅问题干扰：末尾</th>
+<th align="right">中间</th>
+<th align="right">变化（百分点）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DeepSeek-V4-Pro</td>
+<td align="right">100%</td>
+<td align="right">96%</td>
+<td align="right">-4</td>
+<td align="right">100%</td>
+<td align="right">82%</td>
+<td align="right">-18</td>
+</tr>
+<tr>
+<td>MiMo-V2.5-Pro</td>
+<td align="right">100%</td>
+<td align="right">68%</td>
+<td align="right">-32</td>
+<td align="right">84%</td>
+<td align="right">30%</td>
+<td align="right">-54</td>
+</tr>
+<tr>
+<td>Kimi-K2.6</td>
+<td align="right">94%</td>
+<td align="right">96%</td>
+<td align="right">+2</td>
+<td align="right">98%</td>
+<td align="right">64%</td>
+<td align="right">-34</td>
+</tr>
+<tr>
+<td>GLM-5.1</td>
+<td align="right">96%</td>
+<td align="right">98%</td>
+<td align="right">+2</td>
+<td align="right">100%</td>
+<td align="right">50%</td>
+<td align="right">-50</td>
+</tr>
+</tbody></table></div>
+<p>变化＝中间准确率－末尾准确率。“带解答”指干扰材料含其他问题的解答，不是给出目标问题答案。某些条件影响较小，另一些明显下降；不能据该表推导通用模型排名或企业生产可靠率。</p>
+<h2 id="section-2">历史图：Lost in the Middle</h2>
+<p><a href="https://arxiv.org/html/2307.03172v3">Liu等（2023），Table 6</a>：2,655道NQ-Open问题，20份文档中1份包含答案，贪心解码。横轴为答案文档位置，纵轴为回答准确率。旧课件的比较在此保留为研究史，不能用来判断当前产品表现。</p>
+<p><svg viewBox="0 0 720 280" role="img" aria-label="历史研究折线图，GPT-3.5在第1位置75.7%，第10位置54.1%；Claude对应59.8%和57.0%。" xmlns="http://www.w3.org/2000/svg"><rect width="720" height="280" fill="white"/><path d="M70 35V215H670" fill="none" stroke="#576979"/><path d="M70 47L220 157L370 176L520 168L670 121" fill="none" stroke="#176b86" stroke-width="3"/><path d="M70 142L220 165L370 158L520 156L670 140" fill="none" stroke="#ac5b36" stroke-width="3"/><g font-size="16" fill="#233b51"><text x="8" y="43">80%</text><text x="8" y="103">70%</text><text x="8" y="163">60%</text><text x="8" y="218">50%</text><text x="65" y="240">1</text><text x="214" y="240">5</text><text x="360" y="240">10</text><text x="510" y="240">15</text><text x="660" y="240">20</text><text x="85" y="272" fill="#176b86">GPT-3.5-Turbo (16K), 0613</text><text x="395" y="272" fill="#ac5b36">Claude-1.3 (100K)</text></g></svg></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>模型 / 位置</th>
+<th align="right">1</th>
+<th align="right">5</th>
+<th align="right">10</th>
+<th align="right">15</th>
+<th align="right">20</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT-3.5-Turbo (16K), 0613</td>
+<td align="right">75.7%</td>
+<td align="right">57.3%</td>
+<td align="right">54.1%</td>
+<td align="right">55.4%</td>
+<td align="right">63.1%</td>
+</tr>
+<tr>
+<td>Claude-1.3 (100K)</td>
+<td align="right">59.8%</td>
+<td align="right">55.9%</td>
+<td align="right">57.0%</td>
+<td align="right">57.4%</td>
+<td align="right">60.0%</td>
+</tr>
+</tbody></table></div>
+<p>企业测试可以固定问题和证据，改变位置、干扰材料与长度，分开报告答案正确、引用完整和允许动作。数据不足时先补任务样本，不能由长窗口规格直接推定可靠。</p>
+<p>关联：<a href="../cards/04-context-and-enterprise-knowledge.html">C04 上下文与企业知识</a>、<a href="../cards/10-four-layer-evaluation.html">C10 四层评测</a>。</p>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>用错误代价比较方案｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">一个可复算示例</a><a href="#section-3">决策问题</a><a href="#section-4">数据与概率怎样进入阈值判断</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>用错误代价比较方案</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>用错误代价比较方案｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">一个可复算示例</a><a href="#section-3">决策问题</a><a href="#section-4">数据与概率怎样进入阈值判断</a><a href="#section-5">校准图的阅读顺序</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>用错误代价比较方案</h1>
 <h2 id="section-1">管理结论</h2>
 <p>准确率不能直接回答“值不值得做”。管理者需要分别看漏报、误报、人工处理量和每类错误的业务代价。</p>
 <h2 id="section-2">一个可复算示例</h2>
@@ -7,34 +7,47 @@
 <thead>
 <tr>
 <th>方案</th>
+<th align="right">命中</th>
 <th align="right">漏报</th>
 <th align="right">误报</th>
-<th align="right">错误代价</th>
+<th align="right">正确放行</th>
+<th align="right">总数</th>
+<th align="right">简化错误代价</th>
 <th align="right">预警后人工处理量</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>人工</td>
+<td align="right">55</td>
 <td align="right">45</td>
 <td align="right">60</td>
+<td align="right">840</td>
+<td align="right">1000</td>
 <td align="right">228万元</td>
 <td align="right">115件</td>
 </tr>
 <tr>
 <td>规则</td>
+<td align="right">75</td>
 <td align="right">25</td>
 <td align="right">180</td>
+<td align="right">720</td>
+<td align="right">1000</td>
 <td align="right">134万元</td>
 <td align="right">255件</td>
 </tr>
 <tr>
 <td>AI</td>
+<td align="right">85</td>
 <td align="right">15</td>
 <td align="right">110</td>
+<td align="right">790</td>
+<td align="right">1000</td>
 <td align="right">80.5万元</td>
 <td align="right">195件</td>
 </tr>
 </tbody></table></div>
+<p>四类互不重叠且覆盖全部1,000笔：命中＋漏报＝100笔实际延迟；误报＋正确放行＝900笔实际正常。预警后人工处理＝命中＋误报，假设每条预警处理一次，得到115、255、195件。处理件数没有计入每件耗时，不能称为总工时。80.5万元只计两类错误代价，未计系统建设、运营与所有有效处置成本。</p>
 <p>公式：<code>漏报数量 × 5万元 + 误报数量 × 500元</code>。</p>
 <p>AI在这个示例中的错误代价最低，但人工处理量高于人工方案；它只能支持进一步验证，不能直接证明完整ROI为正。</p>
 <h2 id="section-3">决策问题</h2>
@@ -50,4 +63,7 @@
 <p>风险分数只能表示排序倾向。概率校准检验同一预测概率组的实际发生比例是否相近。校准可能改变概率含义，但不会自动改善排序或保证新时期仍然有效。三档阈值四格统计没有逐笔概率，不能直接生成实测校准曲线。</p>
 <p>课堂另设300条合成校准记录，三组各100条：平均预测概率20%、50%、80%，实际延迟比例10%、30%、60%。它与上方1,000笔成本算例是不同样本。</p>
 <p>研究依据：<a href="https://proceedings.mlr.press/v70/guo17a.html">Guo等，2017</a>。原研究使用图像与文档分类实验；课堂只借用校准诊断方法。</p>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<h2 id="section-5">校准图的阅读顺序</h2>
+<p>先读横轴：一组记录的平均预测概率。再读纵轴：该组实际发生比例。对角线上，两者一致。100条平均预测80%的记录，实际60条延迟，对应点为（80%，60%），说明这一组概率高估。风险排序好与概率可信是不同判断。校准方法在验证集拟合，最终在独立测试集检验。</p>
+<p>方法参考Guo等（2017），订单曲线为课程合成；不能把示意曲线说成企业实测。自测：若排序保持不变而概率普遍下调，预警阈值和处理量可能怎样变化？</p>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>合成数据、示范与偏好｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">自测</a><a href="#section-6">蒸馏：把任务经验转成更小模型的训练材料</a><a href="#section-7">来源与关联</a><a href="#section-8">审核与蒸馏的不同作用</a><a href="#section-9">同一项获准加急任务的三份材料</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>合成数据、示范与偏好</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>合成数据、示范与偏好｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">怎样生成有用的变式（P19）</a><a href="#section-6">自测</a><a href="#section-7">蒸馏：把任务经验转成更小模型的训练材料</a><a href="#section-8">来源与关联</a><a href="#section-9">审核与蒸馏的不同作用</a><a href="#section-10">同一项获准加急任务的三份材料</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>合成数据、示范与偏好</h1>
 <h2 id="section-1">一句核心思想</h2>
 <p>新增数据应针对当前能力缺口；示范告诉模型“怎样做”，偏好告诉模型“哪个更好”，生成更多样本之前先确定需要改变的行为。</p>
 <h2 id="section-2">机制图</h2>
@@ -40,23 +40,26 @@
 <li>示范轨迹需同时记录失败、恢复与授权依据；不能只保留成功终局。</li>
 <li>企业知识频繁变化时，先考虑知识与检索更新；是否训练取决于要改变的是事实上下文还是模型行为。</li>
 </ul>
-<h2 id="section-5">自测</h2>
+<h2 id="section-5">怎样生成有用的变式（P19）</h2>
+<p>独立教学设定：某项操作额度上限为200，其他资格与授权条件均已满足。生成请求额度180和300两种候选，用确定规则审核，分别标为“额度条件通过”和“超限停止”。标签来自已明确的业务规则，不能仅凭生成模型自称正确。</p>
+<p>这样的变式补充边界条件；不能据合成样本的比例推断真实业务发生率。与真实数据按任务设置配比，最终仍在独立真实任务中检验。审核控制材料质量，蒸馏则是利用教师材料训练学生模型，两者承担不同工作。</p>
+<h2 id="section-6">自测</h2>
 <p>模型在“有授权但缺实时库存”的任务中失败。先判断该补知识、补工具证据还是补训练示范，并说明验证方法。若生成一万条相似成功示范，你预期哪个指标改善，哪个风险可能仍未覆盖？</p>
-<h2 id="section-6">蒸馏：把任务经验转成更小模型的训练材料</h2>
+<h2 id="section-7">蒸馏：把任务经验转成更小模型的训练材料</h2>
 <p>蒸馏利用较强教师系统产生的输出、分布或轨迹指导学生模型学习。企业路径可以是“发现任务缺口 → 教师产生候选示范 → 独立核验 → 训练任务专用模型 → 新旧能力与成本共同验收”。教师输出也可能错，审核、去重和测试隔离仍然需要。</p>
 <p>Google的Retrieve-for-Train研究把强化学习训练的4B模型用于生成集合检索训练材料，再蒸馏到53.9M扩散检索模型。其实验是服装、音乐等领域的集合检索，不是所有问答与智能体任务。它说明训练阶段和部署阶段可以分工，不能据参数量直接推算企业总成本。</p>
 <p>训练验收至少同时报告新任务质量、原有能力回归、延迟及完整成本。2026年9月金融推理后训练技术报告比较数据挖掘、蒸馏与可验证学习，并观察到不同训练方式的能力保留差异。这是具体技术报告中的证据，不是“蒸馏一定避免遗忘”的结论。</p>
 <p>自测：部署模型更小而新任务指标更好，还需要检查哪些旧任务与全流程成本，才能批准替换？</p>
 <p>来源：<a href="https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/">Retrieve-for-Train官方研究介绍</a>（2026-09-15）、<a href="https://arxiv.org/abs/2603.06397">论文</a>；<a href="https://arxiv.org/abs/2609.10113">金融推理后训练报告</a>。新增内容核验2026-09-18；关联：<a href="10-four-layer-evaluation.html">C10 独立与回归评测</a>。</p>
-<h2 id="section-7">来源与关联</h2>
+<h2 id="section-8">来源与关联</h2>
 <ul>
 <li><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization</a>，2023，方法论文。</li>
 <li><a href="https://arxiv.org/abs/2602.12237">Olmix</a>，2026，数据混合研究；<a href="https://arxiv.org/abs/2604.18381">Learning from Less</a>，2026，低数据量RLVR研究。适用范围见<a href="../frontier/data-learning-20260917.html">数据与学习研究专题</a>。</li>
 <li>关联：<a href="04-context-and-enterprise-knowledge.html">企业知识</a>｜<a href="13-active-learning-and-weak-supervision.html">主动学习与弱监督</a>｜<a href="15-reinforcement-learning-environments-rewards.html">强化学习、环境与奖励</a>。来源核验2026-09-17。</li>
 </ul>
-<h2 id="section-8">审核与蒸馏的不同作用</h2>
+<h2 id="section-9">审核与蒸馏的不同作用</h2>
 <p>审核是数据质量控制，蒸馏是训练方法，不能把二者合成同一个阶段。主流程为发现缺口、生成或收集候选、审核并设置配比、独立检验。采用蒸馏时，具体展开为教师生成训练材料、审核、训练学生模型、独立评测。Olmix支持数据配比研究，整个企业流程是课程归纳。</p>
-<h2 id="section-9">同一项获准加急任务的三份材料</h2>
+<h2 id="section-10">同一项获准加急任务的三份材料</h2>
 <div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
 <thead>
 <tr>
@@ -82,4 +85,4 @@
 </tr>
 </tbody></table></div>
 <p>先比较材料再判断方法。课堂Q-learning更新Q表，演示学习机制；它没有训练大语言模型。</p>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.2 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

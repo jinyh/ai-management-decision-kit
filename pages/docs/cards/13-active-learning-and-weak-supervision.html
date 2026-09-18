@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>主动学习与弱监督｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">自测与动态实验</a><a href="#section-6">来源与关联</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>主动学习与弱监督</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>主动学习与弱监督｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">选最拿不准的样本，不是先处理最高风险（P17–P18）</a><a href="#section-6">自测与动态实验</a><a href="#section-7">来源与关联</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>主动学习与弱监督</h1>
 <h2 id="section-1">一句核心思想</h2>
 <p>主动学习让模型挑选值得标注的样本，获得专家标签后更新模型，以更少的标注改善任务表现；弱监督把专家规则等来源转为批量标注信号。两者可以组合。</p>
 <h2 id="section-2">机制图</h2>
@@ -17,13 +17,16 @@
 <li>弱监督标签并非人工金标准。规则覆盖率、冲突、相关性和漂移都需检查。</li>
 <li>标注数相同不代表人工工时相同；生产试点还应记录单条审核时间和争议率。</li>
 </ul>
-<h2 id="section-5">自测与动态实验</h2>
+<h2 id="section-5">选最拿不准的样本，不是先处理最高风险（P17–P18）</h2>
+<p>若三笔订单的预测延迟概率为95%、52%、10%，本课的二分类不确定性采样优先选52%：模型最接近两种判断的分界。业务处置则可能优先处理95%的高风险订单。前者要改善模型，后者要减少当前损失。这是选样思想的独立示例，不是某轮实验的计算结果。</p>
+<p>同一笔订单的弱监督规则可能分别给出“已错过发运窗口→延迟”“供应商承诺准时→正常”“缺物流信息→弃权”。规则冲突需要估计质量与相关性；把同一句承诺复制成多条规则，不会增加独立证据。最后仍用人工金标准检验。</p>
+<h2 id="section-6">自测与动态实验</h2>
 <p>打开<a href="https://jinyh.github.io/supplier-learning-lab/#learning-active">主动学习实验</a>。先预测：同样增加四条标签，哪种选样方式会减少更多测试错误？再选择样本、揭示模拟专家标签并训练，解释两组边界与错误变化。换一组样本后结论是否保持？一次未改善说明什么，还不能说明什么？</p>
 <p>实验使用真实二维逻辑回归与不确定性采样，数据是合成的；八条初始标签、120条候选、200条独立测试记录。六轮后每组共32条标签，结果允许波动。</p>
-<h2 id="section-6">来源与关联</h2>
+<h2 id="section-7">来源与关联</h2>
 <ul>
 <li><a href="https://docs.snorkel.ai/docs/25.4/user-guide/intro/active-learning-weak-supervision/">Snorkel：主动学习与弱监督</a>，核验2026-09-17。</li>
 <li><a href="https://arxiv.org/abs/1711.10160">Snorkel: Rapid Training Data Creation with Weak Supervision</a>，2017，方法论文。</li>
 <li>关联：<a href="02-task-data-quality.html">任务型数据质量</a>｜<a href="14-synthetic-data-demonstrations-preferences.html">合成数据、示范与偏好</a>｜<a href="10-four-layer-evaluation.html">四层评测</a>。</li>
 </ul>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.2 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

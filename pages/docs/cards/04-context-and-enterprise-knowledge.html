@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>区分上下文、企业知识和任务状态｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">冲突处理</a><a href="#section-3">自测</a><a href="#section-4">数据进入AI系统的三条路径</a><a href="#section-5">本课程的知识库与学习教练Skill</a><a href="#section-6">长上下文与检索实验的证据边界</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>区分上下文、企业知识和任务状态</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>区分上下文、企业知识和任务状态｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">冲突处理</a><a href="#section-3">参数、上下文与上下文窗口（P34、P38）</a><a href="#section-4">自测</a><a href="#section-5">数据进入AI系统的三条路径</a><a href="#section-6">本课程的知识库与学习教练Skill</a><a href="#section-7">长上下文与检索实验的证据边界</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>区分上下文、企业知识和任务状态</h1>
 <h2 id="section-1">管理结论</h2>
 <p>模型“知道很多”不等于它拥有当前有效的企业证据。企业需要区分六类内容，并给每类内容明确的来源、有效期和责任人。</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
@@ -42,17 +42,20 @@
 </tbody></table></div>
 <h2 id="section-2">冲突处理</h2>
 <p>当合同、产品资料和内部制度冲突时，Agent不能自行选择“最像答案”的材料。应先根据适用对象、发布日期、合同优先级和责任岗位判断；无法解决时交还人工决定。</p>
-<h2 id="section-3">自测</h2>
+<h2 id="section-3">参数、上下文与上下文窗口（P34、P38）</h2>
+<p>参数是训练学到的数值，决定模型如何处理输入；上下文是这次运行交给模型的问题、材料和当前状态。给模型补充最新合同，会改变本次可用证据，通常不会改变参数。</p>
+<p>Token是模型处理文本的片段单位，不等于一个汉字或一个单词；上下文窗口限制一次可处理的Token数量。能放进更多材料，不等于能可靠找到并正确使用其中每条证据。</p>
+<h2 id="section-4">自测</h2>
 <p>列出当前任务最关键的三份材料，并说明每份材料的责任人、有效期和允许谁读取。</p>
 <p>关联：<a href="05-active-retrieval.html">主动检索</a>｜<a href="06-common-language-and-ontology.html">共同语言与Ontology</a></p>
-<h2 id="section-4">数据进入AI系统的三条路径</h2>
+<h2 id="section-5">数据进入AI系统的三条路径</h2>
 <p>参数知识适合通用模式与任务行为，改变通常需要训练。检索知识适合当前合同、制度和资料，更新需要同步片段、向量索引与版本。结构化查询适合订单、库存和聚合计算，正确性依赖主键、类型、单位和过滤条件。</p>
 <p>微调不替代频繁变化的事实维护。删除原文也不保证派生向量、索引和缓存已同步删除。数据血缘需要标记哪些源记录影响了哪些派生数据、答案引用及历史行动。</p>
 <p>研究依据：<a href="https://arxiv.org/html/2005.11401v4">Lewis等，RAG，2020</a>。系统用途与生命周期建议是课程归纳。</p>
-<h2 id="section-5">本课程的知识库与学习教练Skill</h2>
+<h2 id="section-6">本课程的知识库与学习教练Skill</h2>
 <p>知识库提供可引用的定义、案例和来源。学习教练Skill规定如何选卡、追问与输出。工具决定环境中能够执行什么操作。实际流程是：识别问题，读取两至三张卡，检查证据缺口，请学员修订判断。</p>
 <p>例如，学员问“这项AI投资是否批准”，教练先读C03、C10、C12，区分错误代价、上线证据和投入范围。知识库网页是阅读入口；Skill需在支持它的智能体环境中运行。它只辅助学习，不代替业务审批。维护人审核修订，再用固定问题测试选卡、引用和输出，记录版本与回退依据。</p>
 <p>参见<a href="../../.agents/skills/ai-management-decision-coach/SKILL.html">实际Skill文件</a>。采购技能教学示例可以迁移相同结构：适用条件、取证步骤、例外处理与输出要求，不为示例虚构版本历史。</p>
-<h2 id="section-6">长上下文与检索实验的证据边界</h2>
+<h2 id="section-7">长上下文与检索实验的证据边界</h2>
 <p>2020年RAG实验用于说明怎样逐个检查组件，不代表当前模型性能。2026年位置控制研究在64K、GSM8K任务及两类干扰材料中仍观察到不同程度的位置影响，条件与数据见<a href="../frontier/context-position-20260918.html">长上下文专题</a>。企业应按自己的任务、位置、材料与配置验证。</p>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.2 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

@@ -83,4 +83,4 @@ OpenCode会从 `.agents/skills/` 发现课程Skill。仓库不保存模型提供
 
 选读：先用[C07](docs/cards/07-agent-loop-and-state.md)区分知识、经验与参数更新，再用[C10](docs/cards/10-four-layer-evaluation.md)检查完成条件与能力退化；[C14](docs/cards/14-synthetic-data-demonstrations-preferences.md)讨论蒸馏，[C15](docs/cards/15-reinforcement-learning-environments-rewards.md)讨论训练环境。核验2026-09-18。
 
-版本v0.6.1，配套课件v0.11.0。2026-09-18修订计算说明、来源边界、知识库与Skill案例、学习信号及有条件决策。知识卡保持15张。
+版本v0.6.2，配套课件v0.11.2。2026-09-18同步特征与标签、参数与上下文、检索、语义约束、样本选择、合成变式、强化学习任务与成本口径及上线监测。知识卡保持15张，现有学习教练路由继续按问题读取两至三张卡。

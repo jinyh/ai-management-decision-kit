@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>四层评测与上线证据｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">评测集设计</a><a href="#section-3">自测</a><a href="#section-4">重复运行、组件实验与过程证据</a><a href="#section-5">数据与学习的边界</a><a href="#section-6">验证器：核对完成条件</a><a href="#section-7">新任务改善与原有能力分别验收</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>四层评测与上线证据</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>四层评测与上线证据｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">评测集设计</a><a href="#section-3">上线后的变化先查原因（P111）</a><a href="#section-4">自测</a><a href="#section-5">重复运行、组件实验与过程证据</a><a href="#section-6">数据与学习的边界</a><a href="#section-7">验证器：核对完成条件</a><a href="#section-8">新任务改善与原有能力分别验收</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>四层评测与上线证据</h1>
 <h2 id="section-1">管理结论</h2>
 <p>单一模型基准不能证明企业任务可上线。评测至少覆盖四层，并使用真实任务分布和失败样本。</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
@@ -33,21 +33,23 @@
 <h2 id="section-2">评测集设计</h2>
 <p>应包含正常任务、长尾例外、证据冲突、权限不足、工具失败和规则变化。平均分可能掩盖高代价失败，应按金额、客户影响或监管风险分层查看。</p>
 <p>新版本上线前，要说明它相对当前版本或人工基线改善了什么、牺牲了什么，以及哪些失败会触发回退。</p>
-<h2 id="section-3">自测</h2>
+<h2 id="section-3">上线后的变化先查原因（P111）</h2>
+<p>新订单、供应商或文本的分布发生变化，称为数据漂移；相同输入与结果之间的关系变化，称为概念漂移。监测到变化只是调查信号。先检查数据来源、字段口径、有效规则、任务分布与实际错误，再决定修订知识、调整流程还是重新训练，并用独立任务和原有能力回归评测验收。</p>
+<h2 id="section-4">自测</h2>
 <p>为自己的任务各写一个任务指标、经营指标和控制指标。若三者不能同时观察，下一步应先补证据。</p>
 <p>关联：<a href="03-error-cost-and-evaluation.html">错误代价</a>｜<a href="12-evidence-gates-and-memo.html">证据门与备忘录</a></p>
-<h2 id="section-4">重复运行、组件实验与过程证据</h2>
+<h2 id="section-5">重复运行、组件实验与过程证据</h2>
 <p>同一任务重复运行，固定初态与版本，分别报告至少一次成功、每次成功和逐次成功率。<a href="https://arxiv.org/html/2406.12045v1">τ-bench，2024</a>用pass@k与pass^k区分前两种口径；它们与一次任务内部多个步骤的成功概率不同。</p>
 <p>Benchmark指固定任务和评分规则。课堂任务为条款核对、供方归并、方案准备和异常恢复，各运行四次，成功次数分别为4、2、1、0：至少一次成功为3/4＝75%，四次均成功为1/4＝25%，逐次成功为7/16＝43.75%。每次运行恢复测试初态，避免重复提交真实订单。这是借鉴τ-bench思想的教学算例，不是论文实测榜单。这不是生产可靠率。实际测试需要足够任务、重复次数以及不确定性说明。</p>
 <p>最终状态正确仍可能伴随过程违规，例如未经确认就提交。检查工具轨迹、权限与允许副作用，按严重程度分层报告。97%的权限通过率没有分母和失败类型时，不能判断是否足够上线。</p>
 <p>经营验证另设可比对照，记录预测时点、采取的措施和结果。成功干预消除了延迟时，不能仅凭最终未延迟将预警归为误报。</p>
-<h2 id="section-5">数据与学习的边界</h2>
+<h2 id="section-6">数据与学习的边界</h2>
 <p>主动学习比较必须统一初始模型和标注预算，隔离候选池与独立测试集。强化学习应分开训练表现与关闭探索、停止更新的策略评测；实际完成、延迟、成本与权限违规独立计算，不能从奖励分数反推。参见<a href="13-active-learning-and-weak-supervision.html">C13</a>、<a href="15-reinforcement-learning-environments-rewards.html">C15</a>。</p>
-<h2 id="section-6">验证器：核对完成条件</h2>
+<h2 id="section-7">验证器：核对完成条件</h2>
 <p>验证器把任务要求转成可检查的条件。订单系统声称“已完成加急”，应核对订单对象、动作时授权、加急登记及承运确认；这仍不等于货物已经按时交付。界面文本或智能体自己的总结只能作为线索，关键依据来自独立业务状态和回执。</p>
 <p><a href="https://jinyh.github.io/supplier-learning-lab/#learning-verifier">打开验证器对照实验</a>：先预测三条记录中哪些应通过，再比较“只看完成声明”和“核对实际状态与授权”。同一条记录可能被不同检查方法判成不同结果。实验使用独立的合成审计记录，不改变原有学习与审批状态。</p>
 <p>验证器也要有测试集：已完成却被拒绝的误拒、未完成却被接受的误收、对象不匹配、过期授权、缺失回执。若它产生训练奖励，误收可能鼓励模型学会“得分”，而没有完成任务。奖励目标是否正确，与验证器是否测准，是两个检查问题。</p>
-<h2 id="section-7">新任务改善与原有能力分别验收</h2>
+<h2 id="section-8">新任务改善与原有能力分别验收</h2>
 <div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
 <thead>
 <tr>
@@ -75,4 +77,4 @@
 <p>训练集、开发用验证器测试及最终验收集分别维护，记录版本；不能用训练奖励代替发布评测。金融推理技术报告提醒：任务训练可能伴随旧能力变化，实际取舍必须由本企业独立回归评测决定。</p>
 <p>来源：<a href="https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/">Echoverse</a>（2026-07-30，厂商研究）；<a href="https://arxiv.org/abs/2609.10113">金融推理后训练技术报告</a>（2026-09，非通用保证）。新增内容核验2026-09-18。</p>
 <p>论文出处：<a href="https://arxiv.org/abs/2607.28074">Echoverse，Microsoft Research，2026</a>。课堂图为课程改绘，验证器对照为简化演示，不作为论文复现。运行时核验是否完成，训练时还可将核验结果转成学习信号。核验2026-09-18。</p>
-<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.1 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
+<div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · v0.6.2 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>

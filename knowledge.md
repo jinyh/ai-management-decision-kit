@@ -46,3 +46,5 @@ Agent和学习者都应从本页定位材料，只读取当前任务需要的卡
 | 奖励会让系统学会什么？ | [C15 强化学习、环境与奖励](docs/cards/15-reinforcement-learning-environments-rewards.md) | C07、C10 |
 
 [2026年9月研究专题：Snorkel、Olmix与低数据量RLVR](docs/frontier/data-learning-20260917.md)。原五张核心卡路径保持不变，新增三张为选读。
+
+选读：先用[C07](docs/cards/07-agent-loop-and-state.md)区分知识、经验与参数更新，再用[C10](docs/cards/10-four-layer-evaluation.md)检查完成条件与能力退化；[C14](docs/cards/14-synthetic-data-demonstrations-preferences.md)讨论蒸馏，[C15](docs/cards/15-reinforcement-learning-environments-rewards.md)讨论训练环境。核验2026-09-18。

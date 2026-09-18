@@ -1,6 +1,6 @@
 # 数据与学习：2026年9月研究专题
 
-核验日期：2026-09-17。稳定方法见C13—C15；本页保存会变化的研究与产品案例，厂商报告不等于独立验证。
+原专题核验日期：2026-09-17；以下扩展研究核验日期：2026-09-18。稳定方法见C13—C15；本页保存会变化的研究与产品案例，厂商报告不等于独立验证。
 
 ## Snorkel：从标签到训练环境
 
@@ -27,3 +27,15 @@
 把每条新结果拆成任务、数据、基线、训练方式、评测、限制六项。更新案例时保留原始来源及核验日；若只有厂商报告，继续标为厂商报告。下一次核验建议在课前进行，不自动改变稳定原理。
 
 关联：[C13 主动学习与弱监督](../cards/13-active-learning-and-weak-supervision.md)｜[C14 合成数据、示范与偏好](../cards/14-synthetic-data-demonstrations-preferences.md)｜[C15 强化学习、环境与奖励](../cards/15-reinforcement-learning-environments-rewards.md)。
+
+## 9月18日扩展：从训练数据到经验系统
+
+| 研究与来源 | 课程采用内容 | 实验边界与维护位置 |
+|---|---|---|
+| [Echoverse](https://www.microsoft.com/en-us/research/blog/echoverse-deep-evolving-environments-for-computer-use-agents/)，Microsoft，2026-07-30 | 企业训练把环境、任务、验证器一起建设；核对状态与因果后果 | 厂商研究，非本课程复现；C10、C15及验证器对照 |
+| [ACE](https://arxiv.org/abs/2510.04618)，2025-10首发、2026-03修订 | 生成、反思、整理上下文操作手册，区别于模型参数更新 | 论文中的上下文适应方法；C07，经验仍需审核与权限控制 |
+| [Retrieve-for-Train官方介绍](https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/)及[论文](https://arxiv.org/abs/2603.06397)，2026-09-15介绍 | 4B教师产生训练材料，蒸馏到53.9M扩散检索模型 | 服装、音乐等集合检索，不能推广为通用模型能力；C14 |
+| [Data-Centric Post-Training for Financial Reasoning](https://arxiv.org/abs/2609.10113)，2026-09 | 新任务表现和原有能力保留分别检查 | 技术报告，结果限于所用模型、数据和评测；C10、C14 |
+| [Nested Learning](https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/)，Google，2025-11-07 | 持续学习与不同时间尺度的更新值得跟踪 | 前沿选读；HOPE为概念验证，不讲成已成熟的企业在线自学习能力 |
+
+推荐顺序：先读C07区分更新对象，再读C15理解环境，最后用C10检查验证器和能力退化。蒸馏选读C14。新增内容不增加核心知识卡数量，也不改变课前阅读包。

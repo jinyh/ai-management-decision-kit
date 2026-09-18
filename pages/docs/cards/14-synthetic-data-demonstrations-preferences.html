@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>合成数据、示范与偏好｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">自测</a><a href="#section-6">来源与关联</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>合成数据、示范与偏好</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>合成数据、示范与偏好｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">一句核心思想</a><a href="#section-2">机制图</a><a href="#section-3">供应商例子</a><a href="#section-4">使用条件与常见误判</a><a href="#section-5">自测</a><a href="#section-6">蒸馏：把任务经验转成更小模型的训练材料</a><a href="#section-7">来源与关联</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>合成数据、示范与偏好</h1>
 <h2 id="section-1">一句核心思想</h2>
 <p>新增数据应针对当前能力缺口；示范告诉模型“怎样做”，偏好告诉模型“哪个更好”，生成更多样本之前先确定需要改变的行为。</p>
 <h2 id="section-2">机制图</h2>
@@ -42,7 +42,13 @@
 </ul>
 <h2 id="section-5">自测</h2>
 <p>模型在“有授权但缺实时库存”的任务中失败。先判断该补知识、补工具证据还是补训练示范，并说明验证方法。若生成一万条相似成功示范，你预期哪个指标改善，哪个风险可能仍未覆盖？</p>
-<h2 id="section-6">来源与关联</h2>
+<h2 id="section-6">蒸馏：把任务经验转成更小模型的训练材料</h2>
+<p>蒸馏利用较强教师系统产生的输出、分布或轨迹指导学生模型学习。企业路径可以是“发现任务缺口 → 教师产生候选示范 → 独立核验 → 训练任务专用模型 → 新旧能力与成本共同验收”。教师输出也可能错，审核、去重和测试隔离仍然需要。</p>
+<p>Google的Retrieve-for-Train研究把强化学习训练的4B模型用于生成集合检索训练材料，再蒸馏到53.9M扩散检索模型。其实验是服装、音乐等领域的集合检索，不是所有问答与智能体任务。它说明训练阶段和部署阶段可以分工，不能据参数量直接推算企业总成本。</p>
+<p>训练验收至少同时报告新任务质量、原有能力回归、延迟及完整成本。2026年9月金融推理后训练技术报告比较数据挖掘、蒸馏与可验证学习，并观察到不同训练方式的能力保留差异。这是具体技术报告中的证据，不是“蒸馏一定避免遗忘”的结论。</p>
+<p>自测：部署模型更小而新任务指标更好，还需要检查哪些旧任务与全流程成本，才能批准替换？</p>
+<p>来源：<a href="https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/">Retrieve-for-Train官方研究介绍</a>（2026-09-15）、<a href="https://arxiv.org/abs/2603.06397">论文</a>；<a href="https://arxiv.org/abs/2609.10113">金融推理后训练报告</a>。新增内容核验2026-09-18；关联：<a href="10-four-layer-evaluation.html">C10 独立与回归评测</a>。</p>
+<h2 id="section-7">来源与关联</h2>
 <ul>
 <li><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization</a>，2023，方法论文。</li>
 <li><a href="https://arxiv.org/abs/2602.12237">Olmix</a>，2026，数据混合研究；<a href="https://arxiv.org/abs/2604.18381">Learning from Less</a>，2026，低数据量RLVR研究。适用范围见<a href="../frontier/data-learning-20260917.html">数据与学习研究专题</a>。</li>

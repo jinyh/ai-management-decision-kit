@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>智能体循环与任务状态｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">完整工作循环</a><a href="#section-3">三项边界</a><a href="#section-4">选择题</a><a href="#section-5">模型选择与程序控制</a><a href="#section-6">数据与学习的边界</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>智能体循环与任务状态</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="企业管理者的AI课程学习资料：数据、知识、行动授权与投资证据。"><meta name="theme-color" content="#233b51"><title>智能体循环与任务状态｜AI时代的数据治理</title><link rel="icon" href="../../../assets/decision-mark.svg?v=a8e5e13603"><link rel="stylesheet" href="../../../assets/site.css?v=801b17e91a"><script src="../../../assets/site.js?v=cd812c671e" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header><div class="wrap topbar"><a class="brand" href="../../../index.html">AI时代的数据治理<span>管理者学习资料</span></a><nav aria-label="主导航"><a href="../../../index.html#paths">学习路径</a><a href="../../../index.html#library">知识卡</a><a href="../../../wef.html">WEF与知识图谱</a><a href="../student-guide.html">学习指南</a></nav></div></header><main id="main" class="wrap reader-layout"><aside><a href="../../../index.html">← 返回学习首页</a><p class="eyebrow">本页内容</p><nav aria-label="文章目录"><a href="#section-1">管理结论</a><a href="#section-2">完整工作循环</a><a href="#section-3">三项边界</a><a href="#section-4">选择题</a><a href="#section-5">模型选择与程序控制</a><a href="#section-6">数据与学习的边界</a><a href="#section-7">系统从经验中改善的三种方式</a></nav><button type="button" class="print-button" data-print>打印 / 保存PDF</button></aside><article class="prose"><h1>智能体循环与任务状态</h1>
 <h2 id="section-1">管理结论</h2>
 <p>智能体适合目标明确、路径需要根据环境调整、能够检查中间结果的多步任务。步骤固定、异常少、规则清楚的流程，普通自动化通常更容易控制。</p>
 <h2 id="section-2">完整工作循环</h2>
@@ -20,4 +20,33 @@
 <p>研究机制依据：<a href="https://arxiv.org/abs/2210.03629">ReAct，2022</a>。持久化、授权与恢复是课程的企业系统设计归纳。</p>
 <h2 id="section-6">数据与学习的边界</h2>
 <p>运行中的“观察—行动—反馈”可以只执行既定策略；强化学习还要用奖励更新策略或行动回报估计，以改善后续行动。调用工具一次并不等于完成学习。参见<a href="15-reinforcement-learning-environments-rewards.html">C15 强化学习、环境与奖励</a>。</p>
+<h2 id="section-7">系统从经验中改善的三种方式</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的表格"><table>
+<thead>
+<tr>
+<th>要改变什么</th>
+<th>如何改善</th>
+<th>应检查什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>业务事实与制度知识</td>
+<td>修订知识库、检索索引及有效版本</td>
+<td>事实是否生效、引用是否正确</td>
+</tr>
+<tr>
+<td>可复用的经验与技能</td>
+<td>审核执行轨迹，把成功方法和失败教训整理为可检索的操作手册</td>
+<td>经验适用条件、反例、责任人、有效期与回滚</td>
+</tr>
+<tr>
+<td>模型参数与行动策略</td>
+<td>用审核示范、偏好或环境奖励训练</td>
+<td>独立任务表现、原有能力回归、成本及授权边界</td>
+</tr>
+</tbody></table></div>
+<p>后两者都可能改变后续行为，但只有第三种明确更新模型参数或所训练的策略。把一条经验放进提示词，不等于模型已经完成参数训练。经验记忆也不能授予新的业务权限。</p>
+<p>ACE研究用生成、反思与整理来更新上下文操作手册。它支持“改进上下文也是一种适应方式”，不代表所有企业应用都会自动持续学习。采购时要求供应商指出究竟更新了哪一层，并给出版本、审核和恢复办法。</p>
+<p>自测：合同金额上限改变、工具失败后的恢复经验、持续遗漏必要步骤，分别优先改哪一层？什么证据能证明改动有效？</p>
+<p>来源：<a href="https://arxiv.org/abs/2510.04618">ACE</a>，2025年首次发布、2026年3月修订；新增内容核验2026-09-18。关联：<a href="04-context-and-enterprise-knowledge.html">C04 企业知识</a>、<a href="14-synthetic-data-demonstrations-preferences.html">C14 训练数据</a>。</p>
 <div class="reader-end"><a href="../../knowledge.html">继续浏览知识导航 →</a></div></article></main><footer><div class="wrap"><p>金耀辉 教授 · 上海交通大学 计算机学院 / 人工智能研究院</p><div><span>课程辅助资料 · 2026</span><a href="../../sources.html">来源与更新</a><a href="https://github.com/jinyh/ai-management-decision-kit">源码仓库</a></div></div></footer></body></html>
